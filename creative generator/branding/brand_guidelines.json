@@ -1,0 +1,148 @@
+{
+  "brand": "Junglück",
+  "colors": {
+    "core_palette": {
+      "sand_beige": "#D7B59A",
+      "golden_amber": "#FFB969",
+      "sage_green": "#A1B477",
+      "warm_cream": "#F9F4EE",
+      "warm_brown": "#A5846E",
+      "dark_gray_brown": "#746864"
+    },
+    "functional": {
+      "cta_dark": "#190A00",
+      "white": "#ffffff",
+      "body_text": "#2e2d2c",
+      "secondary_text": "#706560",
+      "error_sale": "#ca0000"
+    },
+    "usage_notes": "Die 6 Core-Palette-Farben sind das Branding-Fundament. Hintergrundfarben DÜRFEN dynamisch und passend zur Ad gewählt werden — auch Farben außerhalb der Core-Palette (z.B. Soft Blue wie in der Referenz-Ad). Die Core-Farben sorgen für Wiedererkennungswert bei Text, Badges, Preis-Tags und Akzenten. Flexibilität bei Hintergründen = Creative Diversity."
+  },
+  "typography": {
+    "primary_font": "Figtree",
+    "primary_weight": 400,
+    "primary_usage": "Satzanfang, Body-Text, Preis, Subheadlines — die 'neutrale' Stimme",
+    "highlight_font": "Aime",
+    "highlight_weight": "400 italic",
+    "highlight_usage": "Highlight-Wörter, emotionale Akzente, Headlines ganz oder teilweise. Der Wiedererkennungswert.",
+    "brand_pattern": "Typisches Junglück-Pattern: Figtree beginnt → Aime italic hebt das Schlüsselwort hervor. Beispiel aus Referenz-Ad: 'Hol dir jetzt dein' (Figtree) + 'Strahlen' (Aime bold italic) + 'zurück!' (Figtree). Oder: 'MIT UNSEREM' (Figtree) + 'KENNENLERN SET GLASS SKIN' (Aime bold).",
+    "flexibility": "Kann variieren: Mal komplette Headline in Aime italic (wie 'TROCKEN? TROCKENER? DEINE HAUT?'), mal nur ein Highlight-Wort. Mal nur Figtree. Creative Diversity > starres Pattern.",
+    "ad_typography": {
+      "headline": "Aime italic (ganz) ODER Mixed Figtree + Aime italic — dynamisch je nach Ad-Konzept",
+      "subheadline": "Figtree 400 mit einzelnen Aime italic Highlight-Wörtern",
+      "labels": "Aime italic für Labels wie 'VORHER' / 'NACHHER'",
+      "price": "Figtree 400, große Zahl, oft auf Golden Amber (#FFB969) Badge",
+      "product_name": "Figtree + Aime bold Mix",
+      "disclaimer": "Figtree 400, klein"
+    }
+  },
+  "logo": {
+    "usage": "NICHT in jeder Ad — variabel einsetzen. Manchmal Logo, manchmal ohne. Creative Diversity.",
+    "versions": {
+      "dark": "branding/logo_dark.png (Original, dunkler Text)",
+      "white": "branding/logo_white.png (Weiße Version, für dunkle Hintergründe)"
+    },
+    "position": "Variabel — Top-Center, Top-Left, oder gar nicht",
+    "size": "Dezent bis mittel, nie dominierend"
+  },
+  "cta": {
+    "in_ad": "Kein CTA-Button nötig in der Ad selbst — Meta liefert den Button. Stattdessen: Preis-Badges, Angebots-Text, oder 'Sparen'-Hinweise als Kaufanreiz.",
+    "style_if_used": "Rechteckig, #190A00 (dunkel) Hintergrund, weißer Text, Figtree 400",
+    "typical_texts": ["Sparen", "Jetzt entdecken", "Jetzt risikofrei testen", "Zum Set"],
+    "flexibility": "CTA-Text muss zum Angle/Sub-Angle passen — nicht immer derselbe"
+  },
+  "price_display": {
+    "format": "'FÜR NUR XX,XX €' oder 'ab XX,XX €'",
+    "style": "Figtree 400, große Zahl, oft auf Golden Amber (#FFB969) Badge",
+    "usage": "Optional — nicht in jeder Ad, aber wenn Preis ein Selling Point ist"
+  },
+  "visual_style": {
+    "overall": "Clean, warm minimalism with natural luxury positioning",
+    "palette_direction": "Hintergrundfarben dynamisch und passend zur Ad — die Core-Palette definiert Akzente und Text, nicht zwingend den Hintergrund",
+    "photography": "Natural lighting, dewy/glowing skin, minimal makeup, warm color temperature",
+    "whitespace": "Generous, editorial feel",
+    "key_identifiers": [
+      "Figtree + Aime italic Mix als Schrift-Signatur",
+      "Warme Erdtöne in Akzenten und Badges",
+      "Golden Amber (#FFB969) Preis-Badges",
+      "Dunkelbraune Glasflaschen als Produktsignatur",
+      "Clean, nicht überladen",
+      "Vorher/Nachher in Aime italic"
+    ]
+  },
+  "ad_patterns": {
+    "layouts": [
+      {
+        "name": "before_after_lifestyle",
+        "description": "Headline top (Aime italic), Vorher/Nachher Split mit Model-Fotos, Produkt-Lineup unten, Preis-Badge auf Golden Amber",
+        "reference": "Referenz-Ad: 'Trocken? Trockener? Deine Haut?' auf Soft Blue Background"
+      },
+      {
+        "name": "lifestyle_emotional",
+        "description": "Full-bleed lifestyle photography, text overlay minimal",
+        "score_range": "176-186 (highest performing)"
+      },
+      {
+        "name": "product_lineup_pedestal",
+        "description": "Farbiger Banner oben, Produkte in Reihe auf cleaner Oberfläche, Steps nummeriert",
+        "score_range": "62-112"
+      },
+      {
+        "name": "three_column_steps",
+        "description": "Headline oben, 3 vertikale Panels mit Lifestyle Close-ups + Produkt-Overlay",
+        "score_range": "60-108"
+      },
+      {
+        "name": "ingredient_showcase",
+        "description": "Model-Face + Inhaltsstoff-Thumbnails + Produkte unten",
+        "score_range": "62-112"
+      },
+      {
+        "name": "single_hero_product",
+        "description": "Ein Produkt zentral, starker Headline-Text, minimalistisch",
+        "score_range": "variabel"
+      }
+    ],
+    "composition": {
+      "structure": "Flexibel — 3-zone vertical ist häufig, aber nicht zwingend",
+      "alignment": "Center-aligned dominiert",
+      "aspect_ratios": ["4:5 (Feed)", "9:16 (Story)"]
+    },
+    "product_display": {
+      "grouping": "Einzelprodukt ODER Set/Routine (3-4 Produkte) — je nach Angle",
+      "ordering": "Links-nach-rechts nach Skincare-Step: Reinigung > Serum > Booster > Creme",
+      "style": "Dunkelbraune Glasflaschen + helle Creme-Tube, Höhenstaffelung"
+    },
+    "recurring_elements": [
+      "Vorher/Nachher Labels in Aime italic",
+      "Nummerierte Steps (1-2-3)",
+      "'Risikofrei'-Messaging",
+      "Preis-Badge auf Golden Amber",
+      "30 Tage Zufriedenheitsgarantie"
+    ]
+  },
+  "product_images": {
+    "selection_rule": "Always use index 0.jpg — clean product shot/Freisteller auf weißem Hintergrund",
+    "exclude_indices": [1, 9],
+    "exclude_types": ["routine infographics", "dermatest certificates", "text overlay images", "testimonial quotes"],
+    "lifestyle_indices": [5, 7, 8],
+    "exclude_products": ["kosmetiktuch", "zugabe-*", "face-yoga-class", "deine-routine"]
+  },
+  "tone_of_voice": {
+    "language": "German",
+    "address": "Informal 'du'",
+    "style": "Approachable expert — scientific credibility + warmth",
+    "keywords": ["Natürliche Pflege", "Authentische Kosmetik", "Überwiegend natürliche Inhaltsstoffe"],
+    "trust_signals": ["30 Tage Zufriedenheitsgarantie", "700.000 glückliche Kund:innen", "Dermatest geprüft", "1€ Spende pro Bestellung"]
+  },
+  "reference_ad_analysis": {
+    "description": "Before/After Ad für Kennenlern Set Glass Skin",
+    "headline": "TROCKEN? TROCKENER? DEINE HAUT? — komplett in Aime italic, hellblau auf Soft Blue BG",
+    "subheadline": "Hol dir jetzt dein *Strahlen* zurück! — Figtree + 'Strahlen' in Aime bold italic",
+    "layout": "Headline top → Vorher/Nachher Split (Model auf blauem BG) → Produkt-Lineup unten → Preis-Badge (Golden Amber) → Bottom-Text mit Aime bold Produktname",
+    "colors_used": "Soft Blue Hintergrund (dynamisch, nicht Core), Golden Amber (#FFB969) Preis-Badge, weiß für Text auf Blau",
+    "products": "4er-Lineup: Reinigungsöl, Vitamin C Sensitiv Serum, Hydration Booster, Hyaluron Creme Mittel",
+    "price": "FÜR NUR 32,94 € auf Golden Amber Badge",
+    "key_takeaway": "Beweist: Hintergrundfarben sind frei wählbar, Core-Palette definiert Akzente. Font-Mix Figtree+Aime ist der Wiedererkennungswert."
+  }
+}

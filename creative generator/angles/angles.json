@@ -1,0 +1,369 @@
+{
+  "brand": "Junglück",
+  "generated_by": "claude",
+  "review_base": {
+    "total": 200,
+    "negative": 46,
+    "neutral": 18,
+    "positive": 136
+  },
+  "angles": [
+    {
+      "angle": "Problem/Pain",
+      "emoji": "🔥",
+      "type": "core",
+      "sub_angles": [
+        {
+          "name": "Kaputte Pumpspender",
+          "description": "Der Pumpmechanismus versagt regelmäßig beim letzten Drittel — Kunden verlieren teures Produkt und sind frustriert.",
+          "review_evidence": "Bisher ging bei jedem Produkt beim letzten Drittel die Pumpe kaputt. IMMER. Warum kann man nicht einfach ganz normale Tiegel mit einem Deckel nehmen?!",
+          "hook_suggestion": "Du zahlst für 100% Produkt — aber bekommst nur 70% raus?",
+          "review_rating": 2
+        },
+        {
+          "name": "Unreine Haut trotz Pflege",
+          "description": "Kunden investieren in teure Naturkosmetik, sehen aber keine Verbesserung bei Pickeln und Unreinheiten.",
+          "review_evidence": "Die Serie hat nach 2 Monaten Anwendung bei mir keinerlei Verbesserung gebracht. Nicht mal ein Pickel ist durch Junglück weggegangen.",
+          "hook_suggestion": "Teure Pflege, null Ergebnis? So findest du endlich die richtige Routine.",
+          "review_rating": 2
+        },
+        {
+          "name": "Rezepturänderung zerstört Vertrauen",
+          "description": "Langjährige Kundinnen vertragen nach Produktänderungen plötzlich ihre Lieblingsprodukte nicht mehr.",
+          "review_evidence": "Seit 2018 benutze ich die Produkte. In letzter Zeit wurden Produkte 'verbessert', seitdem vertrage ich einige Produkte nicht mehr.",
+          "hook_suggestion": "Dein Lieblingsprodukt plötzlich unverträglich? Das steckt dahinter.",
+          "review_rating": 2
+        },
+        {
+          "name": "Drogerie-Katastrophe",
+          "description": "Wer von Naturkosmetik auf günstige Drogerie-Produkte zurückwechselt, bekommt sofort Hautprobleme.",
+          "review_evidence": "Wegen des erhöhten Preises habe ich günstige Produkte aus der Drogerie gekauft — alles 1:1 ersetzt. Ich bekam Pickel, Entzündungen im Gesicht — Katastrophe!",
+          "hook_suggestion": "Sparst du an deiner Haut? Das passiert, wenn du zurück zur Drogerie gehst.",
+          "review_rating": 5
+        },
+        {
+          "name": "Hautprobleme seit der Schwangerschaft",
+          "description": "Frauen kämpfen nach Schwangerschaft mit völlig verändertem Hautbild und finden keine Lösung.",
+          "review_evidence": "Kämpfe seit der Schwangerschaft mit unreiner Haut. Alles erfolglos.",
+          "hook_suggestion": "Unreine Haut seit der Schwangerschaft? Du bist nicht allein.",
+          "review_rating": 5
+        },
+        {
+          "name": "Empfindliche Haut findet nichts",
+          "description": "Sensible Haut reagiert auf Konservierungsstoffe und Duftstoffe — die Suche nach verträglicher Pflege ist endlos.",
+          "review_evidence": "Da ich sehr sensible Haut habe und auf viele Dinge reagiere, habe ich auch hier reagiert. Leider kann ich nur die Hälfte benutzen.",
+          "hook_suggestion": "Deine Haut reagiert auf alles? Es gibt eine Lösung ohne Duftstoffe.",
+          "review_rating": 3
+        },
+        {
+          "name": "Preis-Leistung stimmt nicht",
+          "description": "Kleine Fläschchen, hohe Preise — Kunden fühlen sich abgezockt, besonders wenn die Wirkung ausbleibt.",
+          "review_evidence": "Ich war mega enttäuscht, wie klein das Fläschchen ist. Sehr viel Geld für wenig Inhalt. Bis jetzt sind noch keine Aknenarben verschwunden.",
+          "hook_suggestion": "Teuer = besser? Wann sich Premium-Pflege wirklich lohnt.",
+          "review_rating": 3
+        }
+      ]
+    },
+    {
+      "angle": "Benefit",
+      "emoji": "✨",
+      "type": "core",
+      "sub_angles": [
+        {
+          "name": "Sichtbare Ergebnisse in Tagen",
+          "description": "Kunden berichten von spürbarer Hautverbesserung innerhalb weniger Tage — nicht Wochen.",
+          "review_evidence": "Meine Haut hat sich innerhalb weniger Tage zu der Haut verbessert die ich haben wollte und mit der ich mich sehr wohl fühle.",
+          "hook_suggestion": "In wenigen Tagen zur Haut, die du dir wünschst.",
+          "review_rating": 5
+        },
+        {
+          "name": "Ausgeglichene Mischhaut",
+          "description": "Ölige und trockene Stellen werden gleichzeitig reguliert — die Haut findet ihre Balance.",
+          "review_evidence": "Meine Haut ist so viel ausgeglichener, entspannter und weicher! Die öligen Bereiche haben sich deutlich verringert.",
+          "hook_suggestion": "Fettig UND trocken? Deine Haut kann beides auf einmal lösen.",
+          "review_rating": 5
+        },
+        {
+          "name": "Unreinheiten verschwinden",
+          "description": "Akne und Pickel gehen messbar zurück — selbst nach jahrelangem Kampf.",
+          "review_evidence": "Bin begeistert. Habe mit starken Unreinheiten zu kämpfen und ich merke schon nach wenigen Tagen eine Verbesserung.",
+          "hook_suggestion": "Schluss mit Unreinheiten — sichtbare Ergebnisse nach wenigen Tagen.",
+          "review_rating": 5
+        },
+        {
+          "name": "Natürlicher Selbstbräuner ohne Flecken",
+          "description": "Gleichmäßige, natürliche Bräune ohne Geruch und ohne Streifen — kein Vergleich zu anderen Produkten.",
+          "review_evidence": "Ich habe schon so viele Selbstbräuner getestet, aber KEINS war so gleichmäßig ohne Geruch und einfach in der Handhabung.",
+          "hook_suggestion": "Der einzige Selbstbräuner, der wirklich natürlich aussieht.",
+          "review_rating": 5
+        },
+        {
+          "name": "Periorale Dermatitis besiegt",
+          "description": "Selbst hartnäckige Hauterkrankungen wie periorale Dermatitis werden durch die duftstofffreie Pflege kontrolliert.",
+          "review_evidence": "Meine periorale Dermatitis konnte ich dank Junglück 100% bekämpfen und alles ist bis jetzt clean geblieben!",
+          "hook_suggestion": "Periorale Dermatitis? Diese Pflege hat es geschafft.",
+          "review_rating": 5
+        },
+        {
+          "name": "Reife Haut bleibt elastisch",
+          "description": "Langzeitanwendung sorgt für elastische, faltenarme Haut — auch im Alter.",
+          "review_evidence": "Ich benutze die Produkte für reife Haut seit einem Jahr. Meine Haut ist elastisch und ich habe wenig Falten.",
+          "hook_suggestion": "Weniger Falten nach einem Jahr — ohne Botox, ohne Filter.",
+          "review_rating": 5
+        },
+        {
+          "name": "Perfekt für Rosacea",
+          "description": "Azelain Serum lindert Rötungen und Juckreiz bei empfindlicher Rosacea-Haut.",
+          "review_evidence": "Das Azelain Serum tut meiner geröteten und juckenden Haut richtig gut. Ich bin froh, es gekauft zu haben.",
+          "hook_suggestion": "Rötungen und Juckreiz? Dieses Serum wurde dafür gemacht.",
+          "review_rating": 5
+        }
+      ]
+    },
+    {
+      "angle": "Proof",
+      "emoji": "✅",
+      "type": "core",
+      "sub_angles": [
+        {
+          "name": "Nie wieder Drogerie",
+          "description": "Kunden die zurück zur Drogerie wechselten, kamen mit Hautproblemen zurück — der ultimative Beweis.",
+          "review_evidence": "Ich habe günstige Produkte aus der Drogerie gekauft — ich bekam Pickel, Entzündungen im Gesicht. Nach der 1. Anwendung Junglück fühle ich mich 100000 mal besser.",
+          "hook_suggestion": "Sie wechselte zurück zur Drogerie. Das passierte mit ihrer Haut.",
+          "review_rating": 5
+        },
+        {
+          "name": "700.000 zufriedene Kund:innen",
+          "description": "Die schiere Masse an positiven Erfahrungen schafft Vertrauen — die Brand nutzt diese Zahl selbst.",
+          "review_evidence": "700.000 glückliche Kund:innen (aus Winner Ad)",
+          "hook_suggestion": "700.000 Frauen vertrauen dieser Pflege. Du auch?",
+          "review_rating": 5
+        },
+        {
+          "name": "Dermatest geprüft",
+          "description": "Klinisch getestet und für besonders verträglich befunden — echte Zertifizierung, kein Marketing-Claim.",
+          "review_evidence": "Besonders verträglich & Dermatest geprüft (aus Winner Ad)",
+          "hook_suggestion": "Klinisch getestet. Dermatest bestätigt: Besonders verträglich.",
+          "review_rating": 5
+        },
+        {
+          "name": "Langzeit-Treue",
+          "description": "Kundinnen bleiben über Jahre bei Junglück — echte Loyalität statt einmaligem Kauf.",
+          "review_evidence": "Ich bin seit vielen Jahren Junglück-Kundin und habe mich bereits durch viele der Produkte probiert sowie meine Favoriten gefunden.",
+          "hook_suggestion": "Warum Kundinnen seit Jahren bei dieser Marke bleiben.",
+          "review_rating": 5
+        },
+        {
+          "name": "Persönliche Hautberatung",
+          "description": "Kostenlose Beratung hilft, das richtige Produkt zu finden — kein Rätselraten.",
+          "review_evidence": "Wer die Produkte in vollem Umfang ausprobieren möchte, sollte sich an die angebotene Beratung wenden. Das hilft nicht nur das Hautbasis-Programm zu finden.",
+          "hook_suggestion": "Unsicher welche Pflege? Lass dich kostenlos beraten.",
+          "review_rating": 4
+        },
+        {
+          "name": "Sofort-Ergebnis nach dem Wechsel",
+          "description": "Bereits nach der ersten Anwendung spürbare Verbesserung — kein wochenlanges Warten.",
+          "review_evidence": "Bereits nach der 1. Anwendung fühle ich mich 100000 mal besser. Es wirkt super schnell. Innerhalb 2 Tage war mein Gesicht wieder tip top.",
+          "hook_suggestion": "Erste Anwendung, erster Unterschied. So schnell wirkt Naturkosmetik.",
+          "review_rating": 5
+        }
+      ]
+    },
+    {
+      "angle": "Curiosity",
+      "emoji": "🔮",
+      "type": "scaling",
+      "sub_angles": [
+        {
+          "name": "Was macht Azelain Säure?",
+          "description": "Azelain ist ein Wirkstoff, den viele nicht kennen — aber der bei Rötungen, Akne und Rosacea Wunder wirkt.",
+          "review_evidence": "Das Azelain Serum tut meiner geröteten und juckenden Haut richtig gut.",
+          "hook_suggestion": "Dieser Wirkstoff kennt fast niemand — aber er verändert deine Haut.",
+          "review_rating": 5
+        },
+        {
+          "name": "Warum reagiert deine Haut auf alles?",
+          "description": "Die Ursache für empfindliche Haut sind oft Konservierungsstoffe und Duftstoffe — nicht die Haut selbst.",
+          "review_evidence": "Ich fühle mich immer sicher was die Produkte angeht und benütze sie unbedenklich an Allergie oder Reaktion durch Duftstoffe oder andere Zusätze!",
+          "hook_suggestion": "Deine Haut ist nicht das Problem. Deine Pflege ist es.",
+          "review_rating": 5
+        },
+        {
+          "name": "Was passiert wenn du Drogerie-Pflege absetzt?",
+          "description": "Der dramatische Unterschied zwischen Natur- und Drogerie-Kosmetik — am eigenen Leib erlebt.",
+          "review_evidence": "Ich habe günstige Produkte aus der Drogerie gekauft — ich bekam Pickel, Entzündungen im Gesicht — Katastrophe!",
+          "hook_suggestion": "Was passiert, wenn du deine Drogerie-Creme absetzt? (Spoiler: Nichts Gutes)",
+          "review_rating": 5
+        },
+        {
+          "name": "Retinol vs. Retinal — der Unterschied",
+          "description": "Retinal Creme ist ständig ausverkauft — aber warum ist sie so begehrt? Der Unterschied zu normalem Retinol.",
+          "review_evidence": "Ich versuche seit Monaten die Retinal Creme erneut zu bestellen. Keine Chance. Sie ist immer ausverkauft.",
+          "hook_suggestion": "Diese Creme ist seit Monaten ausverkauft. Der Grund überrascht.",
+          "review_rating": 1
+        },
+        {
+          "name": "Was steckt wirklich in deiner Creme?",
+          "description": "Die meisten wissen nicht, was in ihren Pflegeprodukten steckt — Junglück setzt auf Transparenz.",
+          "review_evidence": "Jungglück überzeugt durch die Produkte und Inhaltsstoffe. Die Beschreibungen sind sehr ausführlich.",
+          "hook_suggestion": "Weißt du, was in deiner Creme steckt? Die Antwort könnte dich schockieren.",
+          "review_rating": 5
+        },
+        {
+          "name": "Squalan-Öl — das unterschätzte Wunder",
+          "description": "Squalan-Öl als Pflege-Booster, den viele noch nicht kennen — flexibel einsetzbar.",
+          "review_evidence": "Bestellt wurden Basis Set für Ölige Haut + Squalan Öl — das finde ich bis dato spitze und hilft.",
+          "hook_suggestion": "Dieses Öl verändert deine Pflege-Routine komplett.",
+          "review_rating": 4
+        }
+      ]
+    },
+    {
+      "angle": "Education",
+      "emoji": "📚",
+      "type": "scaling",
+      "sub_angles": [
+        {
+          "name": "Hauttyp richtig bestimmen",
+          "description": "Viele kaufen die falschen Produkte, weil sie ihren Hauttyp nicht kennen — die Hautanalyse löst das.",
+          "review_evidence": "Ich habe die Hautanalyse gemacht und aufgrund dessen die Produkte bestellt.",
+          "hook_suggestion": "Du kennst deinen Hauttyp nicht? Deshalb wirkt deine Pflege nicht.",
+          "review_rating": 3
+        },
+        {
+          "name": "Die richtige Reihenfolge der Pflege",
+          "description": "Serum, Creme, Öl — die Reihenfolge entscheidet über die Wirksamkeit.",
+          "review_evidence": "Mit dem getönten Tagesserum war ich etwas herausgefordert, da es sich in den Falten abgesetzt hat, aber da könnte ich auch einen Handhabungsfehler gemacht haben.",
+          "hook_suggestion": "Serum vor oder nach der Creme? Die meisten machen es falsch.",
+          "review_rating": 4
+        },
+        {
+          "name": "Weniger ist mehr bei Naturkosmetik",
+          "description": "2-3 Pumpstöße reichen aus — richtige Dosierung spart Geld und verbessert die Wirkung.",
+          "review_evidence": "2-3 Pumpstöße meiner Meinung nach nicht ausreichend, wenn ich Gesicht, Hals und Dekolletee eincreme.",
+          "hook_suggestion": "So viel Produkt brauchst du wirklich. (Weniger als du denkst)",
+          "review_rating": 4
+        },
+        {
+          "name": "Warum Glasverpackung?",
+          "description": "Nachhaltigkeit als bewusste Entscheidung — Glas statt Plastik hat einen Grund.",
+          "review_evidence": "Die nachhaltige Verpackung find ich toll! Natürlich auch, dass das Unternehmen generell sehr bedacht auf und mit unserer Umwelt produziert.",
+          "hook_suggestion": "Warum wir Glas statt Plastik verwenden. (Es geht nicht nur um die Umwelt)",
+          "review_rating": 5
+        },
+        {
+          "name": "Naturkosmetik braucht Geduld",
+          "description": "Natürliche Wirkstoffe arbeiten anders als chemische — Ergebnisse kommen, aber man muss dranbleiben.",
+          "review_evidence": "Da Hautpflege Zeit braucht, wollte ich die Produkte zunächst testen, bevor ich nachbestelle.",
+          "hook_suggestion": "Warum deine Naturkosmetik nach 2 Wochen noch nicht wirkt. (Und warum das gut ist)",
+          "review_rating": 2
+        },
+        {
+          "name": "Vitamin C richtig anwenden",
+          "description": "Vitamin C Serum kann pigmentreduzierend wirken — wichtig zu wissen vor der Anwendung.",
+          "review_evidence": "Ich hätte mir einen deutlicheren Hinweis in Sachen Pigmentreduzierung gewünscht. Ich mag meine Sommersprossen und habe nun Angst.",
+          "hook_suggestion": "Vitamin C Serum: Was du vor der ersten Anwendung wissen musst.",
+          "review_rating": 4
+        }
+      ]
+    },
+    {
+      "angle": "Story",
+      "emoji": "💜",
+      "type": "scaling",
+      "sub_angles": [
+        {
+          "name": "Zurück zu Junglück nach der Drogerie",
+          "description": "Kundin wechselt aus Kostengründen — kommt reuig zurück, weil die Haut rebelliert.",
+          "review_evidence": "Wegen des erhöhten Preises habe ich günstige Produkte aus der Drogerie gekauft. Ich bekam Pickel, Entzündungen. Nun habe ich doch wieder Junglück bestellt. Es wird nichts anderes mehr für mich geben.",
+          "hook_suggestion": "Ich habe bei meiner Haut gespart. Das war der größte Fehler.",
+          "review_rating": 5
+        },
+        {
+          "name": "Schwangerschaftshaut endlich im Griff",
+          "description": "Nach der Schwangerschaft komplett verändertes Hautbild — erst Junglück brachte die Lösung.",
+          "review_evidence": "Kämpfe seit der Schwangerschaft mit unreiner Haut. Alles erfolglos bis ich das Set für unreine Haut bestellt habe — einfach nur wow.",
+          "hook_suggestion": "Nach der Schwangerschaft war meine Haut nicht mehr dieselbe. Bis ich das hier fand.",
+          "review_rating": 5
+        },
+        {
+          "name": "Adventskalender als Einstieg",
+          "description": "Durch den Adventskalender die Marke entdeckt — und dann Stück für Stück die volle Routine aufgebaut.",
+          "review_evidence": "Ich kannte viele Produkte durch den Adventskalender. Nun bestelle ich nach und nach die Produkte nach. Tolle Produkte, die mein Hautbild spürbar verbessert haben.",
+          "hook_suggestion": "Ein Adventskalender veränderte meine komplette Pflege-Routine.",
+          "review_rating": 5
+        },
+        {
+          "name": "Endlich die richtige Pflege gefunden",
+          "description": "Nach jahrelanger Suche endlich Produkte, die zur empfindlichen Haut passen.",
+          "review_evidence": "Es sind soo tolle Produkte! Endlich habe ich die richtige Pflege gefunden.",
+          "hook_suggestion": "Jahre habe ich gesucht. Das war die Lösung.",
+          "review_rating": 5
+        },
+        {
+          "name": "Vom Skeptiker zum Stammkunden",
+          "description": "Erst skeptisch wegen des Preises, dann überzeugt durch die Ergebnisse.",
+          "review_evidence": "Natürlich wünschte ich mir einen geringeren Preis, aber ich werde es wieder kaufen, da es wirklich gut hilft.",
+          "hook_suggestion": "Zu teuer, dachte ich. Dann probierte ich es trotzdem.",
+          "review_rating": 5
+        },
+        {
+          "name": "Wimperntusche-Überraschung",
+          "description": "Eigentlich wegen eines schlechten Erlebnisses nie wieder bestellt — dann gab die Wimperntusche den Neustart.",
+          "review_evidence": "Ich habe vor Jahren mal ein Produkt nicht vertragen. Nun habe ich die schwarze Wimperntusche ausprobiert — und ich liebe sie! Irgendwie schau ich in den Spiegel und finde meine Augen jedes Mal strahlend!",
+          "hook_suggestion": "Ich hatte Junglück aufgegeben. Dann entdeckte ich dieses Produkt.",
+          "review_rating": 4
+        }
+      ]
+    },
+    {
+      "angle": "Offer",
+      "emoji": "🏷️",
+      "type": "scaling",
+      "sub_angles": [
+        {
+          "name": "Glückswochen bis -30%",
+          "description": "Die größte Sale-Aktion des Jahres — garantiert beste Rabatte auf alle Kategorien.",
+          "review_evidence": "GLÜCKSWOCHEN mit bis zu 30% Rabatt! Die garantiert besten Rabatte des Jahres. (Winner Ad)",
+          "hook_suggestion": "Bis zu 30% auf alles. Nur solange der Vorrat reicht.",
+          "review_rating": 5
+        },
+        {
+          "name": "30 Tage Zufriedenheitsgarantie",
+          "description": "Kein Risiko beim Erstkauf — 30 Tage testen und bei Unzufriedenheit zurückgeben.",
+          "review_evidence": "30 Tage Zufriedenheitsgarantie (aus Winner Ad)",
+          "hook_suggestion": "30 Tage testen. Nicht zufrieden? Geld zurück.",
+          "review_rating": 5
+        },
+        {
+          "name": "Proben und Sets zum Testen",
+          "description": "Kleine Probegrößen zum Einstieg — kein Risiko, die falschen Produkte zu kaufen.",
+          "review_evidence": "Prima waren die Proben, z.B. aus den Adventskalendern. So konnte ich testen was mir gefällt.",
+          "hook_suggestion": "Nicht sicher? Teste zuerst mit Proben.",
+          "review_rating": 5
+        },
+        {
+          "name": "1€ Spende pro Bestellung",
+          "description": "Jeder Kauf finanziert Schulbau in Malawi — Pflege mit Sinn und Herz.",
+          "review_evidence": "Wir spenden 1€ pro Bestellung für einen Schulbau in Malawi (aus Winner Ad)",
+          "hook_suggestion": "Dein Kauf baut Schulen. 1€ pro Bestellung für Kinder in Malawi.",
+          "review_rating": 5
+        },
+        {
+          "name": "Kostenlose Hautanalyse",
+          "description": "Kostenlose Beratung vor dem Kauf — das richtige Produkt für jeden Hauttyp finden.",
+          "review_evidence": "Ich habe die Hautanalyse gemacht und aufgrund dessen die Produkte bestellt.",
+          "hook_suggestion": "Gratis Hautanalyse: Finde in 2 Minuten deine perfekte Routine.",
+          "review_rating": 3
+        },
+        {
+          "name": "Sets statt Einzelkauf",
+          "description": "Komplette Pflege-Sets für verschiedene Hautbedürfnisse — günstiger als Einzelkauf.",
+          "review_evidence": "Das Set für unreine Haut bestellt und was soll ich sagen, einfach nur wow. Meine Haut ist sichtlich besser geworden.",
+          "hook_suggestion": "Dein komplettes Pflege-Set — alles aufeinander abgestimmt.",
+          "review_rating": 5
+        }
+      ]
+    }
+  ]
+}
