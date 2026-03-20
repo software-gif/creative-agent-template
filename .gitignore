@@ -8,6 +8,9 @@
 .claude/.mcp.json
 .claude/CLAUDE.local.md
 
+# Meeting transcripts
+Google-Meet-*.json
+
 # Dependencies
 node_modules/
 
