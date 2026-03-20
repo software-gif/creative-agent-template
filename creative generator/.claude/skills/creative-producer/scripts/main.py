@@ -102,8 +102,8 @@ class SupabaseClient:
             data=file_bytes,
             timeout=60,
         )
-        # If file exists, try upsert
-        if resp.status_code == 400:
+        # If file exists, try upsert (409 Conflict or 400 Bad Request)
+        if resp.status_code in (400, 409):
             headers["x-upsert"] = "true"
             resp = requests.post(
                 f"{self.storage_url}/object/{bucket}/{path}",

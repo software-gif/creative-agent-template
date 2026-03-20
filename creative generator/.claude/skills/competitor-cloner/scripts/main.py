@@ -29,10 +29,6 @@ except ImportError:
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", "..", "..", ".."))
 
-# Also import from creative-producer for shared functionality
-PRODUCER_DIR = os.path.join(SCRIPT_DIR, "..", "..", "creative-producer", "scripts")
-sys.path.insert(0, PRODUCER_DIR)
-
 GEMINI_MODEL = "gemini-3.1-flash-image-preview"
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 

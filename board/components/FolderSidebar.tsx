@@ -45,17 +45,19 @@ export default function FolderSidebar({
 
   async function createFolder() {
     if (!newName.trim() || !brandId) return;
-    await supabase.from("asset_folders").insert({
+    const { error } = await supabase.from("asset_folders").insert({
       brand_id: brandId,
       name: newName.trim(),
     });
+    if (error) return;
     setNewName("");
     setCreating(false);
     loadFolders();
   }
 
   async function deleteFolder(folderId: string) {
-    await supabase.from("asset_folders").delete().eq("id", folderId);
+    const { error } = await supabase.from("asset_folders").delete().eq("id", folderId);
+    if (error) return;
     if (selectedFolderId === folderId) onSelectFolder(null);
     loadFolders();
   }

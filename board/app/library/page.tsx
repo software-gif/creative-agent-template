@@ -47,7 +47,12 @@ export default function Library() {
   }
 
   async function removeFromLibrary(creativeId: string) {
-    await supabase.from("saved_assets").delete().eq("creative_id", creativeId);
+    const { error: deleteError } = await supabase
+      .from("saved_assets")
+      .delete()
+      .eq("creative_id", creativeId);
+    if (deleteError) return;
+
     await supabase
       .from("creatives")
       .update({ is_saved: false })
@@ -56,10 +61,12 @@ export default function Library() {
   }
 
   async function moveToFolder(folderId: string, creativeId: string) {
-    await supabase
+    const { error } = await supabase
       .from("saved_assets")
       .update({ folder_id: folderId })
       .eq("creative_id", creativeId);
+    if (error) return;
+
     setAssets((prev) =>
       prev.map((a) =>
         a.creative_id === creativeId ? { ...a, folder_id: folderId } : a

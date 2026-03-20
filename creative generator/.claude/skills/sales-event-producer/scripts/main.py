@@ -81,8 +81,7 @@ def build_prompt(product, event, guidelines, brand, args, variant_num):
     # CTA
     cta = args.cta or "Jetzt sparen"
 
-    # Product image path
-    color_slug = (args.color or "designer-schwarz").lower().replace(" ", "-")
+    # Product image path (first image, color variants use same freisteller)
     product_image = f"products/images/{product['handle']}/0.jpg"
 
     # Build the prompt JSON (creative-producer compatible)

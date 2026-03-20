@@ -57,6 +57,7 @@ CREATE POLICY "Public delete saved_assets" ON saved_assets
 -- 5. Enable Realtime for saved_assets
 ALTER PUBLICATION supabase_realtime ADD TABLE saved_assets;
 
--- 6. Clean slate
-DELETE FROM creatives;
-DELETE FROM brands;
+-- 6. Backfill brand_id for any existing rows, then enforce NOT NULL
+-- UPDATE creatives SET brand_id = (SELECT id FROM brands LIMIT 1) WHERE brand_id IS NULL;
+-- ALTER TABLE creatives ALTER COLUMN brand_id SET NOT NULL;
+-- NOTE: Run the above manually after inserting your brand, if needed.
