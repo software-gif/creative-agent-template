@@ -547,6 +547,90 @@ def composite_logo_in_memory(image_bytes, logo_position, logo_color_mode, logo_s
         return image_bytes
 
 
+def composite_overlay_in_memory(image_bytes, overlay_path, position="bottom_center", scale=0.3):
+    """Composite a PNG overlay (social proof, payment icons, etc.) onto the image."""
+    if not HAS_PIL:
+        return image_bytes
+
+    overlay_full_path = os.path.join(PROJECT_ROOT, overlay_path) if not os.path.isabs(overlay_path) else overlay_path
+    if not os.path.exists(overlay_full_path):
+        print(f"  Overlay not found: {overlay_path} — skipping")
+        return image_bytes
+
+    try:
+        img = Image.open(io.BytesIO(image_bytes)).convert("RGBA")
+        img_w, img_h = img.size
+
+        overlay = Image.open(overlay_full_path).convert("RGBA")
+        ov_ratio = overlay.height / overlay.width
+        new_ov_w = int(img_w * scale)
+        new_ov_h = int(new_ov_w * ov_ratio)
+        overlay = overlay.resize((new_ov_w, new_ov_h), Image.LANCZOS)
+
+        margin_x = int(img_w * 0.04)
+        margin_y = int(img_h * 0.02)
+
+        pos_map = {
+            "top_center": ((img_w - new_ov_w) // 2, margin_y),
+            "bottom_center": ((img_w - new_ov_w) // 2, img_h - new_ov_h - margin_y),
+            "bottom_left": (margin_x, img_h - new_ov_h - margin_y),
+            "bottom_right": (img_w - new_ov_w - margin_x, img_h - new_ov_h - margin_y),
+        }
+        pos = pos_map.get(position, pos_map["bottom_center"])
+
+        img.paste(overlay, pos, overlay)
+
+        buf = io.BytesIO()
+        img.save(buf, format="PNG")
+        print(f"  Overlay composited: {os.path.basename(overlay_path)} at {position}")
+        return buf.getvalue()
+    except Exception as e:
+        print(f"  Warning: Overlay compositing failed ({overlay_path}): {e}")
+        return image_bytes
+
+
+def composite_all_overlays(image_bytes, ad_prompt):
+    """Apply all compositor overlays: logo, social proof, payment icons, etc."""
+    brand_elements = ad_prompt.get("brand_elements", {})
+
+    # 1. Logo
+    logo_config = brand_elements.get("logo", {})
+    if logo_config.get("visible"):
+        image_bytes = composite_logo_in_memory(
+            image_bytes,
+            logo_config.get("position", "top_center"),
+            logo_config.get("color_mode", "auto"),
+            logo_config.get("size", "medium")
+        )
+
+    # 2. Social proof overlay (if file exists)
+    social_proof_path = os.path.join(PROJECT_ROOT, "branding", "social_proof.png")
+    if os.path.exists(social_proof_path):
+        image_bytes = composite_overlay_in_memory(
+            image_bytes, social_proof_path,
+            position="bottom_center", scale=0.5
+        )
+
+    # 3. Payment icons overlay (if file exists)
+    payment_path = os.path.join(PROJECT_ROOT, "branding", "payment_icons.png")
+    if os.path.exists(payment_path):
+        # Position slightly above social proof
+        image_bytes = composite_overlay_in_memory(
+            image_bytes, payment_path,
+            position="bottom_center", scale=0.4
+        )
+
+    # 4. Color variants overlay (if file exists)
+    colors_path = os.path.join(PROJECT_ROOT, "branding", "color_variants.png")
+    if os.path.exists(colors_path):
+        image_bytes = composite_overlay_in_memory(
+            image_bytes, colors_path,
+            position="bottom_center", scale=0.25
+        )
+
+    return image_bytes
+
+
 # ---------------------------------------------------------------------------
 # Single ad generation + upload
 # ---------------------------------------------------------------------------
@@ -582,16 +666,8 @@ def generate_single_ad(api_key, sb, brand_id, batch_id, prompt_data, index, crea
     # Decode image
     image_bytes = base64.standard_b64decode(image_data)
 
-    # Composite logo in memory (before upload)
-    brand_elements = ad_prompt.get("brand_elements", {})
-    logo_config = brand_elements.get("logo", {})
-    if logo_config.get("visible"):
-        image_bytes = composite_logo_in_memory(
-            image_bytes,
-            logo_config.get("position", "top_center"),
-            logo_config.get("color_mode", "dark"),
-            logo_config.get("size", "small")
-        )
+    # Composite all overlays (logo, social proof, payment icons, etc.)
+    image_bytes = composite_all_overlays(image_bytes, ad_prompt)
 
     # Build filename
     angle_slug = meta["angle"].lower().replace("/", "_").replace(" ", "_")

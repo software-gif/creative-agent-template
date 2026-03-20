@@ -1,78 +1,86 @@
 # Creative Producer
 
-> Generiert Static Ads via Gemini 3.1 Flash Image Generation basierend auf Ad Angles, Brand Guidelines und Produktbildern.
+> Generiert Static Ads via Gemini 3.1 Flash Image Generation basierend auf Ad Angles, Brand Guidelines und Produktbildern. Inkl. Multi-Layer Compositor (Logo, Social Proof, Payment Icons).
 
 ## Problem
 Manuell Static Ads zu erstellen ist zeitaufwändig und erfordert Design-Expertise. Der Creative Producer automatisiert die Generierung von brand-konformen Static Ads basierend auf der Andromeda-Diversification-Logik.
 
 ## Trigger
-Nachdem Angle Generator gelaufen ist und der User die Generierung freigibt.
+Nachdem Prompts (von sales-event-producer, competitor-cloner oder manuell) erstellt wurden.
 
 ## Workflow
-1. User gibt Anweisung (z.B. "Generiere 30 Ads" oder "Generiere nur für Problem/Pain")
-2. Claude wählt passende Angles/Sub-Angles und Produktbilder
-3. Claude baut pro Ad einen detaillierten JSON-Prompt
-4. Script sendet JSON-Prompt + Produktbild an Gemini 3.1 Flash
-5. Generierte Ads werden in `creatives/` gespeichert mit Metadaten
-6. Claude gibt Überblick: Angle, Sub-Angle, Format, Vorschau
+1. JSON-Prompts werden übergeben (von sales-event-producer, competitor-cloner oder manuell)
+2. Script sendet JSON-Prompt + Produktbild an Gemini 3.1 Flash
+3. Multi-Layer Compositor fügt Overlays hinzu (Logo, Social Proof, Payment Icons, Farbvarianten)
+4. Upload nach Supabase Storage + DB Update
+5. Creatives erscheinen live im Board
 
 ## Inputs
-Liest automatisch:
-- `angles/angles.json` — Angles + Sub-Angles + Hooks
-- `brand_guidelines.json` — Farben, Fonts, Stilrichtung
-- `brand.json` — Brand-Kontext
-- `products/products.json` — Produktdaten
-- `products/images/<handle>/0.jpg` — Freisteller (Index 0 = sauberes Produktbild)
-- `winners/assets/` — Winner Ads als Stil-Referenz
+- JSON-Prompts-Datei (von anderen Skills oder manuell erstellt)
+- `--brand-id` (optional, auto-detected)
+- Produktbilder in `products/images/<handle>/`
+- Overlay-Assets in `branding/`:
+  - `logo_dark.png` / `logo_white.png` — Brand Logo
+  - `social_proof.png` — Trust Badge (optional)
+  - `payment_icons.png` — Payment Methods (optional)
+  - `color_variants.png` — Farbpunkte (optional)
 
 ## Outputs
-- `creatives/<timestamp>/` — Generierte Ads (4K)
-- `creatives/<timestamp>/manifest.json` — Metadaten pro Ad (Angle, Sub-Angle, Format, Prompt)
+- Generierte Creatives → Supabase Storage `creatives/{brand_id}/{batch_id}/`
+- DB-Einträge in `creatives` Tabelle mit `status='done'`, `image_url`, `storage_path`
+- Lokales Backup in `creatives/<batch_id>/`
+- `manifest.json` pro Batch
 
 ## Formate
 - **4:5** (1536×1920) — Feed
-- **9:16** (1080×1920 → 4K: 2160×3840) — Story
+- **9:16** (1080×1920) — Story (mit 1:1 Safe Zone)
+
+## Multi-Layer Compositor
+Nach der Gemini-Generierung werden folgende Overlays automatisch composited (wenn die Dateien existieren):
+
+1. **Logo** — Auto-Detect: dunkles Logo auf hellem Hintergrund, weißes auf dunklem
+2. **Social Proof** — Trust Badge (z.B. "⭐ 4.8 | 500+ zufriedene Kunden")
+3. **Payment Icons** — PayPal, Visa, Mastercard etc.
+4. **Farbvarianten** — Kleine Kreise mit verfügbaren Farben
+
+Alle Overlays sind optional — wenn die PNG-Datei nicht existiert, wird sie übersprungen.
 
 ## Scripts
-- `scripts/main.py` — Orchestrierung: Prompt-Bau, Gemini API Call, Speicherung
+- `scripts/main.py` — Orchestrierung: Gemini API Call, Compositor, Supabase Upload
 - `scripts/prompt_schema.json` — JSON-Prompt-Schema (Single Source of Truth)
 
 ## Ausführung
-Wird durch Claude gesteuert, nicht direkt ausgeführt. Claude:
-1. Wählt Angles/Sub-Angles nach User-Anweisung
-2. Generiert JSON-Prompts
-3. Ruft `scripts/main.py` mit den Prompts auf
+```bash
+# Direkt mit Prompts-Datei
+python3 .claude/skills/creative-producer/scripts/main.py --prompts-file creatives/prompts.json
+
+# Brand-ID wird automatisch aus DB gelesen (nur 1 Brand)
+```
 
 ## Dependencies
 - Python 3
 - `requests` (pip)
 - `python-dotenv` (pip)
-- `Pillow` (pip) — für Bildverarbeitung
+- `Pillow` (pip) — für Compositor
 - Gemini API Key in `.env` (`GEMINI_API_KEY`)
-- Modell: `gemini-3.1-flash-image-preview`
+- Supabase Credentials in `.env`
 
 ## Wichtige Regeln für Bild-Prompts
 
 ### Produkt NICHT in negativen Szenen
-Bei Szenen die etwas Negatives kommunizieren (Problem, Materialermüdung, Pain Points, Unique Mechanism gegen Konkurrenz) darf das beworbene Produkt NIEMALS im Bild erscheinen. Grund: Der Zuschauer assoziiert das Gezeigte mit der Botschaft — das Negative überträgt sich aufs Produkt.
-- **Betrifft: Hook, Lead, Unique Mechanism (Problem) — ALLE Szenen vor der Solution/Reveal**
-- **Problem-/Negativ-Szenen:** Generische/No-Name-Produkte, abstrakte Grafiken oder typische Konkurrenz-Darstellungen verwenden. Z.B. "abgelatschte generische Sneaker", "no-brand billig-Schuh" — NICHT das beworbene Produkt.
-- **Eigenes Produkt erst ab Solution/Product Reveal zeigen** — vorher ist es tabu, auch wenn die Szene "nur" das Problem beschreibt
+Bei Szenen die etwas Negatives kommunizieren darf das beworbene Produkt NIEMALS im Bild erscheinen. `scene_type: "negative"` blockt automatisch das Produktbild.
 
 ### Nur echte Produktvarianten
-Zeige nur Produktfarben und -varianten die laut `products/products.json` tatsächlich existieren. Erfinde KEINE Farben oder Varianten. Wenn keine Variantendaten vorhanden sind, nur die Hauptfarbe verwenden.
+Zeige nur Produktfarben die in `brand.json` existieren.
 
-### Hintergründe: Authentisch aber sauber
-Der Stil darf "casual" und "unpoliert" sein, aber Hintergründe müssen sauber und aufgeräumt sein. Keine schmutzigen Oberflächen, Krümel, Geschirr-Chaos etc. In Bild-Prompts: "clean background", "tidy surface", "minimal clutter" ergänzen.
+### Safe Zone (9:16 Format)
+Hauptcontent (Produkt, Headline, Benefits, CTA) im mittleren 1:1 Bereich. Logo oben, Social Proof unten — außerhalb der 1:1 Zone.
 
-### Visuelle Kontinuität über alle Szenen
-Alle Bilder eines Storyboards müssen aussehen wie aus EINEM durchgehenden Dreh. Bevor Bild-Prompts erstellt werden:
-1. **Setting definieren:** Ort (z.B. "heller Holztisch"), Licht (z.B. "warmes Tageslicht von links"), Farbwelt, Kamera-Stil
-2. **Setting-Beschreibung in JEDEN Bild-Prompt einbauen** als gemeinsamen Kontext
-3. Perspektiven dürfen variieren (Nah → Halbtotale), aber Ort, Licht und Farbwelt bleiben gleich
-4. Besonders bei UGC-Stil: Ein Creator-Typ, ein Ort, eine Kamera-Ästhetik durchgehend
+### Schriftart
+Poppins Bold für Headlines, Poppins Medium für Body. Immer deutsch.
 
 ## Verbindungen
+- Wird von `sales-event-producer` und `competitor-cloner` als Engine genutzt
 - Liest Output von `angle-generator`, `product-scraper`, `ad-library-scraper`
 - Referenziert `meta-andromeda` Knowledge
-- Referenziert `brand_guidelines.json`
+- Liest `branding/brand_guidelines.json`

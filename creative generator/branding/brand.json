@@ -1,0 +1,101 @@
+{
+  "name": "Essentialbag",
+  "shop_url": "https://www.essentialbag.de",
+  "shop_platform": "shopify",
+  "tagline": "Smarte Alltagsbegleiter für den modernen Lebensstil",
+  "category": "Smart Accessories / EDC",
+  "target_market": "DACH",
+  "language": "de",
+  "currency": "EUR",
+  "brand_values": [
+    "Veganes Material",
+    "Nachhaltigkeit (1 Baum pro Kauf)",
+    "Kompaktes, durchdachtes Design",
+    "RFID Sicherheit",
+    "60 Tage risikofreies Testen"
+  ],
+  "products": [
+    {
+      "handle": "smart-wallet-3-0",
+      "name": "Smart Wallet 3.0",
+      "type": "Wallets & Money Clips",
+      "price_from": 49.00,
+      "url": "https://www.essentialbag.de/products/smart-wallet-3-0",
+      "colors": [
+        "Designer-Schwarz",
+        "Carbon Stealth",
+        "Platin-Grau",
+        "Kaffee-Braun",
+        "Navy Royal",
+        "Karamell",
+        "Olive",
+        "Pink",
+        "Pure Carbon"
+      ],
+      "benefits": [
+        "Sofortiger Kartenzugriff auf Knopfdruck",
+        "Platz für bis zu 10 Karten, Scheine & Münzen",
+        "Integrierter RFID-Schutz",
+        "Kompakt & platzsparend",
+        "Stärkster Magnet am Markt",
+        "Langlebig & robust",
+        "Veganes Premium-Material",
+        "Mit Gravur personalisierbar",
+        "Optional mit AirTag-Tracking"
+      ],
+      "rating": 4.8,
+      "reviews_count": 441
+    },
+    {
+      "handle": "tracker-karte",
+      "name": "Tracker Karte 3.0",
+      "type": "Tracker",
+      "price_from": 34.00,
+      "url": "https://www.essentialbag.de/products/tracker-karte",
+      "colors": [],
+      "benefits": [
+        "Nur 1,9mm dünn — passt in jedes Wallet",
+        "Weltweites Tracking via Apple & Google",
+        "Lauter Signalton wie ein Wecker",
+        "Kein Abo & keine SIM-Karte nötig",
+        "Bis zu 10 Monate Akkulaufzeit",
+        "Kompatibel mit iOS & Android",
+        "60 Tage risikofrei testen"
+      ],
+      "rating": 4.7,
+      "reviews_count": 47
+    },
+    {
+      "handle": "essential-sling-bag",
+      "name": "Essential Sling Bag",
+      "type": "Sling Bag",
+      "price_from": 39.00,
+      "url": "https://www.essentialbag.de/products/essential-sling-bag",
+      "colors": [
+        "Designer-Schwarz",
+        "Platin-Grau"
+      ],
+      "benefits": [
+        "Mehrere Fächer für perfekte Organisation",
+        "Kompakt & trotzdem viel Stauraum",
+        "Wasserdichtes Material",
+        "Leicht & bequem — nur 150g",
+        "Perfekt für Handy, Wallet & Keys",
+        "Veganes Premium-Material"
+      ],
+      "rating": 4.7,
+      "reviews_count": 22
+    }
+  ],
+  "trust_signals": [
+    "60+ zufriedene Kunden",
+    "4.8 Sterne Bewertung",
+    "60 Tage risikofrei testen",
+    "12 Monate Garantie"
+  ],
+  "social_proof": {
+    "trustpilot_rating": null,
+    "shop_rating": 4.8,
+    "total_reviews": 510
+  }
+}
